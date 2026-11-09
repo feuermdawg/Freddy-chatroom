@@ -10,46 +10,48 @@ const drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-
-drone.on('open', error => {
-  if (error) {
-    return console.error(error);
-  }
-  console.log('Successfully connected to Scaledrone');
-
-  const room = drone.subscribe('observable-room');
-  room.on('open', error => {
+bluh()
+function bluh() {
+  drone.on('open', error => {
     if (error) {
       return console.error(error);
     }
-    console.log('Successfully joined room');
-  });
-
-  room.on('members', m => {
-    members = m;
-    updateMembersDOM();
-  });
-
-  room.on('member_join', member => {
-    members.push(member);
-    updateMembersDOM();
-  });
-
-  room.on('member_leave', ({id}) => {
-    const index = members.findIndex(member => member.id === id);
-    members.splice(index, 1);
-    updateMembersDOM();
-  });
-
-  room.on('data', (text, member) => {
-    if (member) {
-      addMessageToListDOM(text, member);
+    console.log('Successfully connected to Scaledrone');
+  
+    const room = drone.subscribe('observable-room');
+    room.on('open', error => {
+      if (error) {
+        return console.error(error);
+      }
+      console.log('Successfully joined room');
+    });
+  
+    room.on('members', m => {
+      members = m;
       updateMembersDOM();
-    } else {
-      // Message is from server
-    }
+    });
+  
+    room.on('member_join', member => {
+      members.push(member);
+      updateMembersDOM();
+    });
+  
+    room.on('member_leave', ({id}) => {
+      const index = members.findIndex(member => member.id === id);
+      members.splice(index, 1);
+      updateMembersDOM();
+    });
+  
+    room.on('data', (text, member) => {
+      if (member) {
+        addMessageToListDOM(text, member);
+        updateMembersDOM();
+      } else {
+        // Message is from server
+      }
+    });
   });
-});
+}
 
 drone.on('close', event => {
   console.log('Connection was closed', event);
@@ -136,19 +138,8 @@ function changeColor() {
         color: "#"+prompt("red")+prompt("green")+prompt("blue"),
       },
     });
-  drone.on('open', error => {
-  if (error) {
-    return console.error(error);
-  }
-  console.log('Successfully connected to Scaledrone');
-
-  const room = drone.subscribe('observable-room');
-  room.on('open', error => {
-    if (error) {
-      return console.error(error);
-    }
-    console.log('Successfully joined room');
-  });
+  
+  bluh()
 }
 
 function addMessageToListDOM(text, member) {

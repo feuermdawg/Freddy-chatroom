@@ -4,8 +4,8 @@ const CLIENT_ID = '4cNswoNqM2wVFHPg';
 
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
-    name: getRandomName(),
-    color: getRandomColor(),
+    name: prompt("name"),
+    color: "#"+prompt("red")+prompt("green")+prompt("blue"),
   },
 });
 
@@ -127,6 +127,14 @@ function createMessageElement(text, member) {
   }
   el.className = 'message';
   return el;
+}
+function changeColor() {
+  const drone = new ScaleDrone(CLIENT_ID, {
+    data: { // Will be sent out as clientData via events
+        name: prompt("name"),
+        color: "#"+prompt("red")+prompt("green")+prompt("blue"),
+      },
+    });
 }
 
 function addMessageToListDOM(text, member) {

@@ -5,7 +5,7 @@ const CLIENT_ID = '4cNswoNqM2wVFHPg';
 drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: prompt("name"),
-    color: "#"+prompt("red")+prompt("green")+prompt("blue"),
+    color: "#"+prompt("hexcode, no need to add the hashtag"),
   },
 });
 

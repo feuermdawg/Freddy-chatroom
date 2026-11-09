@@ -82,7 +82,7 @@ function sendMessage() {
   }
   DOM.input.value = '';
   drone.publish({
-    room: 'observable-room',
+    room: 'main',
     message: value,
   });
 }

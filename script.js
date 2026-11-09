@@ -116,12 +116,13 @@ function updateMembersDOM() {
 function createMessageElement(text, member) {
   const el = document.createElement('div');
   el.appendChild(createMemberElement(member));
-  if (text.slice(0,3)=="img:") {
-    el.appendChild(document.createElement("IMG"));
+  if (text.slice(0,4)=="img:") {
+    x = document.createElement("IMG");
+    x.src=text-"img:";
+    el.appendChild(x);
   }
   else {
     el.appendChild(document.createTextNode(text));
-    console.log(text.slice(0,3))
   }
   el.className = 'message';
   return el;

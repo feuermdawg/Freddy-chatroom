@@ -131,16 +131,7 @@ function createMessageElement(text, member) {
   el.className = 'message';
   return el;
 }
-function changeColor() {
-  drone = new ScaleDrone(CLIENT_ID, {
-    data: { // Will be sent out as clientData via events
-        name: prompt("name"),
-        color: "#"+prompt("red")+prompt("green")+prompt("blue"),
-      },
-    });
-  
-  bluh();
-}
+
 
 function addMessageToListDOM(text, member) {
   const el = DOM.messages;

@@ -141,3 +141,13 @@ function addMessageToListDOM(text, member) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
   }
 }
+
+function roomChange() {
+  room = drone.subscribe(prompt("room name?"));
+    room.on('open', error => {
+      if (error) {
+        return console.error(error);
+      }
+      console.log('Successfully joined room');
+    });
+}

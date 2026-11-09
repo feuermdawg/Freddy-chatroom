@@ -2,7 +2,7 @@
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = '4cNswoNqM2wVFHPg';
 
-const drone = new ScaleDrone(CLIENT_ID, {
+drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: prompt("name"),
     color: "#"+prompt("red")+prompt("green")+prompt("blue"),
@@ -18,7 +18,7 @@ function bluh() {
     }
     console.log('Successfully connected to Scaledrone');
   
-    const room = drone.subscribe('observable-room');
+    room = drone.subscribe('observable-room');
     room.on('open', error => {
       if (error) {
         return console.error(error);
@@ -132,7 +132,7 @@ function createMessageElement(text, member) {
   return el;
 }
 function changeColor() {
-  const drone = new ScaleDrone(CLIENT_ID, {
+  drone = new ScaleDrone(CLIENT_ID, {
     data: { // Will be sent out as clientData via events
         name: prompt("name"),
         color: "#"+prompt("red")+prompt("green")+prompt("blue"),

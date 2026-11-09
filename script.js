@@ -130,7 +130,7 @@ function createMessageElement(text, member) {
 }
 
 function changeColor() {
-  drone.data.color = '#'+prompt("red")+prompt("green")+prompt("blue")
+  drone[1].color = '#'+prompt("red")+prompt("green")+prompt("blue")
 }
 
 function addMessageToListDOM(text, member) {

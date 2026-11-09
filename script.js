@@ -119,7 +119,7 @@ function createMessageElement(text, member) {
   if (text.slice(0,4)=="img:") {
     x = document.createElement("IMG");
     x.src=text.slice(4,text.length);
-    x.height=175
+    x.height=130
     el.appendChild(x);
   }
   else {

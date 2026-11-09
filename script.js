@@ -139,7 +139,7 @@ function changeColor() {
       },
     });
   
-  bluh()
+  bluh();
 }
 
 function addMessageToListDOM(text, member) {

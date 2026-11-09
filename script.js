@@ -117,10 +117,10 @@ function createMessageElement(text, member) {
   const el = document.createElement('div');
   el.appendChild(createMemberElement(member));
   if (text.slice(0,3)=="img:") {
-    el.appendChild(document.createElement("IMG");
+    el.appendChild(document.createElement("IMG"));
   }
   else {
-    el.appendChild(document.createTextNode(text);
+    el.appendChild(document.createTextNode(text));
   }
   el.className = 'message';
   return el;

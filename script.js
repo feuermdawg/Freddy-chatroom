@@ -129,6 +129,10 @@ function createMessageElement(text, member) {
   return el;
 }
 
+function changeColor() {
+  data.color = rgb(prompt(red),prompt(green),prompt(blue))
+}
+
 function addMessageToListDOM(text, member) {
   const el = DOM.messages;
   const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;

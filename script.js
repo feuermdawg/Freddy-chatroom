@@ -120,7 +120,7 @@ function createMessageElement(text, member) {
     el.appendChild(document.createElement("IMG");
   }
   else {
-    el.appendChild(document.createTextNode(text));
+    el.appendChild(document.createTextNode(text);
   }
   el.className = 'message';
   return el;

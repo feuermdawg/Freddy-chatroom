@@ -136,6 +136,19 @@ function changeColor() {
         color: "#"+prompt("red")+prompt("green")+prompt("blue"),
       },
     });
+  drone.on('open', error => {
+  if (error) {
+    return console.error(error);
+  }
+  console.log('Successfully connected to Scaledrone');
+
+  const room = drone.subscribe('observable-room');
+  room.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined room');
+  });
 }
 
 function addMessageToListDOM(text, member) {

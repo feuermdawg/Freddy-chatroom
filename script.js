@@ -116,7 +116,7 @@ function createMessageElement(text, member) {
 }
 
 function changeColor() {
-  drone = new ScaleDrone(CLIENT_ID, {
+drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: prompt("name"),
     color: getRandomColor(),

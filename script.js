@@ -121,7 +121,6 @@ function createMessageElement(text, member) {
   }
   else {
     el.appendChild(document.createTextNode(text));
-    console.log(text.slice(0,3))
   }
   el.className = 'message';
   return el;

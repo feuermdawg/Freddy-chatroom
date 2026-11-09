@@ -2,7 +2,7 @@
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = '1fmek2LsrIqKWvYR'
 
-drone = new ScaleDrone(CLIENT_ID, {
+const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: prompt("name"),
     color: getRandomColor(),

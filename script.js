@@ -118,7 +118,7 @@ function createMessageElement(text, member) {
   el.appendChild(createMemberElement(member));
   if (text.slice(0,4)=="img:") {
     x = document.createElement("IMG");
-    x.src=text.slice(5,text.length);
+    x.src=text.slice(4,text.length);
     el.appendChild(x);
   }
   else {

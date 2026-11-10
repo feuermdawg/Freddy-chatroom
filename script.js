@@ -144,7 +144,7 @@ function addMessageToListDOM(text, member) {
 }
 
 function roomChange() {
-  drone.unsubscribe();
+  drone.unsubscribe(room2);
   room2 = prompt("what room do you want");
   room = drone.subscribe(room2);
 }

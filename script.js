@@ -19,7 +19,7 @@ function bluh() {
     }
     console.log('Successfully connected to Scaledrone');
   
-    
+    room = drone.subscribe(room2);
     room.on('open', error => {
       if (error) {
         return console.error(error);
@@ -146,5 +146,6 @@ function addMessageToListDOM(text, member) {
 function roomChange() {
   drone.unsubscribe(room2);
   room2 = prompt("what room do you want");
+  drone.subscribe(room2)
   bluh();
 }

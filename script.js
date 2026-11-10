@@ -95,7 +95,7 @@ function sendMessage() {
   }
   DOM.input.value = '';
   drone.publish({
-    room: room,
+    room: room.name,
     message: value,
   });
 }

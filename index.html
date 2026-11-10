@@ -16,7 +16,7 @@
       padding: 13px;
       display: flex;
       flex-direction: column;
-      max-height: 95vh;
+      max-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
@@ -28,6 +28,7 @@
       margin-bottom: 15px;
       font-size: 13px;
       color: white;
+      max-height: 85vh
     }
 
     .messages {
@@ -60,6 +61,28 @@
     }
     .message-form__button {
       margin: 10px;
+    }
+    .small_button {
+      --glow-color: rgb(100, 151, 177);
+      --glow-spread-color: rgba(0, 91, 150, 0.781);
+      --enhanced-glow-color: #cc60aa;
+      --btn-color: #03396c;
+      border: .25em solid var(--glow-color);
+      padding: 1em 3em;
+      color: var(--glow-color);
+      font-size: 15px;
+      font-weight: bold;
+      background-color: var(--btn-color);
+      border-radius: 1em;
+      outline: none;
+      box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+      text-shadow: 0 0 .5em var(--glow-color);
+      position: relative;
+      transition: all 0.3s;
+      flex: 0 1 auto;
+      min-width: 100px;
     }
   </style>
 </head>

@@ -10,7 +10,7 @@ drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-room2 = prompt();
+var room2 = prompt();
 bluh()
 function bluh() {
   drone.on('open', error => {
@@ -19,7 +19,7 @@ function bluh() {
     }
     console.log('Successfully connected to Scaledrone');
   
-    room = drone.subscribe(room2);
+    var room = drone.subscribe(room2);
     room.on('open', error => {
       if (error) {
         return console.error(error);

@@ -144,12 +144,7 @@ function addMessageToListDOM(text, member) {
 }
 
 function roomChange() {
+  drone.unsubscribe();
   room2 = prompt("what room do you want");
   room = drone.subscribe(room2);
-    room.on('open', error => {
-      if (error) {
-        return console.error(error);
-      }
-      console.log('Successfully joined room');
-    });
 }

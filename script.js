@@ -10,7 +10,7 @@ drone = new ScaleDrone(CLIENT_ID, {
 });
 let room = 0
 let members = [];
-let room2 = 'observable-'+prompt();
+let room2 = 'observable-'+prompt("write 'main' if you want to join everyone else, or tell your friends a specific code for private chats!");
 bluh()
 function bluh() {
   drone.on('open', error => {

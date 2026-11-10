@@ -144,8 +144,11 @@ function addMessageToListDOM(text, member) {
 }
 
 function roomChange() {
+  drone.on('open')
   drone.unsubscribe(room2);
+  drone.on('open')
   room2 = prompt("what room do you want");
+  drone.on('open')
   drone.subscribe(room2)
   bluh();
 }

@@ -8,9 +8,9 @@ drone = new ScaleDrone(CLIENT_ID, {
     color: "#"+prompt("hexcode, no need to add the hashtag"),
   },
 });
-
+let room = 0
 let members = [];
-var room2 = prompt();
+let room2 = prompt();
 bluh()
 function bluh() {
   drone.on('open', error => {
@@ -19,7 +19,7 @@ function bluh() {
     }
     console.log('Successfully connected to Scaledrone');
   
-    var room = drone.subscribe(room2);
+    let room = drone.subscribe(room2);
     room.on('open', error => {
       if (error) {
         return console.error(error);

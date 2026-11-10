@@ -10,7 +10,7 @@ drone = new ScaleDrone(CLIENT_ID, {
 });
 let room = 0
 let members = [];
-let room2 = 'observable'+prompt();
+let room2 = 'observable-'+prompt();
 bluh()
 function bluh() {
   drone.on('open', error => {
@@ -134,7 +134,7 @@ function roomChange() {
   drone.on('open')
   drone.unsubscribe(room2);
   drone.on('open')
-  room2 = 'observable'+prompt("what room do you want");
+  room2 = 'observable-'+prompt("what room do you want");
   drone.on('open')
   drone.subscribe(room2)
   bluh();

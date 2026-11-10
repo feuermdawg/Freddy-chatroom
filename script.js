@@ -19,7 +19,7 @@ function bluh() {
     }
     console.log('Successfully connected to Scaledrone');
   
-    room = drone.subscribe(room2);
+    
     room.on('open', error => {
       if (error) {
         return console.error(error);

@@ -10,7 +10,7 @@ drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-room2 = 'observable-room';
+room2 = prompt();
 bluh()
 function bluh() {
   drone.on('open', error => {
